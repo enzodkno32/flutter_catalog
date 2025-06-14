@@ -1,22 +1,9 @@
-import 'package:flutter/material.dart';
-
-class TextExample extends StatelessWidget {
-  const TextExample({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Text(
-      'Simple text demo.',
-      // Optional params to try:
-      textAlign: TextAlign.center,
-      style: TextStyle(
-        color: Colors.blue,
-        fontSize: 32.0,
-        fontStyle: FontStyle.italic,
-        decoration: TextDecoration.underline,
-      ),
-      // Or:
-      // style: Theme.of(context).textTheme.xxx
-    );
-  }
-}
+BackdropFilter(
+  filter: ImageFilter.blur(sigmaX: 10.0, sigmaY: 10.0),
+  child: Container(
+    color: Colors.black.withOpacity(0.2),
+    height: 200,
+    width: double.infinity,
+    child: Center(child: Text('Desenfoque Fondo', style: TextStyle(color: Colors.white))),
+  ),
+)
